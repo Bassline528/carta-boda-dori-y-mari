@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Felicidades, Mariangela y Doriham!</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Carga de la fuente Inter (predeterminada de Tailwind) y una fuente de estilo "escrita a mano" -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Definición de fuentes personalizadas para el proyecto */
+        .font-cursive {
+            font-family: 'Dancing Script', cursive;
+        }
+        .font-main {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Efecto de degradado suave para el encabezado: Azul, Gris y Bronce */
+        .text-gradient {
+            background-image: linear-gradient(to right, #1e3a8a, #475569, #ca8a04);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        /* Contenedor principal con efecto de carta moderna y sombra */
+        .letter-container {
+            background: #fff; /* Fondo blanco para la carta */
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2), 0 5px 5px -5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .letter-container:hover {
+            transform: translateY(-5px);
+        }
+        /* Estilo para los nombres de los firmantes */
+        .signature-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1rem;
+            column-count: 2;
+            column-gap: 1.5rem;
+            max-width: 400px;
+        }
+        @media (max-width: 640px) {
+            .signature-list {
+                column-count: 1;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1e3a8a', /* Azul oscuro/Navy */
+                        'secondary': '#475569', /* Gris Pizarra */
+                        'accent': '#ca8a04', /* Bronce/Dorado oscuro para acentos */
+                        'bg-light': '#f3f4f6', /* Gris muy claro para el fondo */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-main bg-bg-light min-h-screen flex items-center justify-center p-4">
+
+    <!-- Contenedor Principal de la Carta -->
+    <div class="letter-container max-w-4xl w-full rounded-3xl p-8 md:p-16 lg:p-20 border-4 border-solid border-primary/50">
+
+        <!-- Título/Saludo Inicial - Estilo a Mano -->
+        <header class="text-center mb-10">
+            <h1 class="text-6xl md:text-8xl font-cursive text-gradient mb-4">
+                ¡Felicidades, Futuros Esposos!
+            </h1>
+            <img src="https://images3.memedroid.com/images/UPLOADED871/62830c970f109.webp" />
+            <p class="text-xl md:text-2xl font-semibold text-secondary">Doriham y Mariangela</p>
+        </header>
+
+        <!-- Cuerpo de la Carta -->
+        <main class="text-gray-900 text-lg md:text-xl leading-relaxed space-y-6">
+
+            <p>
+                En esta etapa tan hermosa y significativa que inician, les deseamos con todo el corazón la mayor de las alegrías y la realización de todos sus sueños.
+            </p>
+
+            <p>
+              Que el amor que los unió siga creciendo y se fortalezca con cada día que pasen juntos. Que su matrimonio sea el refugio seguro donde siempre encuentren paz, apoyo incondicional y la felicidad de construir un hogar lleno de risas, complicidad y sueños compartidos. ¡Que sigan siendo los mejores co-op partners y que la vida juntos tenga más easter eggs increíbles de los que esperan!
+          </p>
+
+
+        </main>
+
+        <!-- Sección de Despedida y Firma -->
+        <footer class="mt-12 text-right">
+            <div class="border-t pt-6 border-secondary/50">
+                <p class="text-3xl md:text-4xl text-primary mb-4 font-cursive">
+                    Tus queridos amigos
+                </p>
+
+                <!-- Área de Firmas - Puedes añadir todos los nombres aquí -->
+                <div class="flex flex-col items-end">
+                    <ul class="signature-list text-gray-700 text-sm italic text-left">
+                        <li>Nelson</li>
+                        <li>Oliver</li>
+                        <li>Mati</li>
+                        <li>Jose</li>
+                        <li>Mike</li>
+                        <li>Gabi F</li>
+                        <li>Manu</li>
+                    </ul>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+</html>
